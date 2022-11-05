@@ -21,3 +21,16 @@ export interface IMovie {
   medium_cover_image: string;
   large_cover_image: string;
 }
+
+export interface ITweet {
+  id: number;
+  text: string;
+  authore: User;
+}
+
+export interface User {
+  id: number;
+  firstName: string;
+  lastNmae: string;
+  fullName: string;
+}
