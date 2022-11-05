@@ -5,14 +5,4 @@ const Apollo = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-Apollo.query({
-  query: gql`
-    {
-      allMovies {
-        title
-      }
-    }
-  `,
-}).then((data) => console.log(data.data));
-
 export default Apollo;
