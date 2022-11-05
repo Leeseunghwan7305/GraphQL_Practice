@@ -1,5 +1,6 @@
 import { useApolloClient, gql, useQuery } from "@apollo/client";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import myStore from "../store";
 import { IMovie, ITweet } from "../type";
 
@@ -50,7 +51,11 @@ const Movie = () => {
     <ul>
       <h1>Movies</h1>
       {data.allMovies.map((movie: IMovie) => {
-        return <li key={movie.id}>{movie.title}</li>;
+        return (
+          <li key={movie.id}>
+            <Link to={`/${movie.id}`}>{movie.title}</Link>
+          </li>
+        );
       })}
       <h1>Tweets</h1>
       {data.allTweets.map((tweet: ITweet) => {
