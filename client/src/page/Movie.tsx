@@ -57,7 +57,7 @@ const Movie = () => {
           </li>
         );
       })}
-      <h1>Tweetdds</h1>
+      <h1>Tweetddsdd</h1>
       {data.allTweets.map((tweet: ITweet) => {
         return <li key={tweet.id}>{tweet.text}</li>;
       })}
